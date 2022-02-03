@@ -1,0 +1,35 @@
+body{
+    background: linear-gradient(180deg, #FFFF66, #FFFFFF);
+    height: 2000px;
+}
+
+ul.left > li > a {
+    color: rgb(192, 0, 0);
+    font-weight: bold;
+}
+
+.funcionario > div{
+    height: 100%;
+    padding: 0 !important;
+}
+
+.f1 {
+    width: 35%;
+    border-radius: 1em;
+}
+
+.f2 {
+    width: 65%;
+    border-radius: 1em;
+}
+
+.materialboxed{
+    border-radius: 1em !important;
+}
+
+
+.funcionario > .f2> span{
+    font-size: .5em;
+    font-weight: bold;
+    border-radius: 1em;
+}

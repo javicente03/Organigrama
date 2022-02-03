@@ -2,223 +2,58 @@
 <html>
 
 <head>
-    <title>Document</title>
-    <style>
-        .funcionario {
-            width: 200px;
-            height: 80px;
-            background-color: black;
-            margin: 0 auto;
-            color: white;
-            text-align: center;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .linea-1 {
-            height: 700px;
-            width: 0;
-            border: 1px solid black;
-            margin: 0 auto;
-        }
-
-        .linea-2 {
-            height: 0px;
-            width: 300px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-610px);
-        }
-
-        .linea-3 {
-            height: 0px;
-            width: 300px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-530px);
-        }
-
-        .linea-4 {
-            height: 0px;
-            width: 300px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-440px);
-        }
-
-        .linea-5 {
-            height: 0px;
-            width: 150px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-350px) translateX(-75px);
-        }
-
-        .linea-6{
-            height: 0px;
-            width: 150px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-310px) translateX(75px);
-        }
-
-        .linea-7{
-            height: 0px;
-            width: 300px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-180px);
-        }
-
-        .linea-8{
-            height: 0px;
-            width: 150px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-80px) translateX(75px);
-        }
-
-        .linea-9{
-            height: 20px;
-            width: 0px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-1175px) translateX(-250px);
-        }
-
-        .linea-10{
-            height: 0px;
-            width: 150px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-1175px) translateX(-250px);
-        }
-
-        .linea-11{
-            height: 20px;
-            width: 0px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-1175px) translateX(-325px);
-        }
-
-        .linea-12{
-            height: 20px;
-            width: 0px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-1198px) translateX(-175px);
-        }
-
-        .linea-13{
-            height: 100px;
-            width: 0px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-1165px);
-        }
-
-        .linea-14{
-            height: 0px;
-            width: 1500px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-1165px) translateX(150px);
-        }
-
-        .linea-15{
-            height: 15px;
-            width: 0px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-1485px) translateX(-516px);
-        }
-
-        .linea-16{
-            height: 15px;
-            width: 0px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-1503px) translateX(-150px);
-        }
-
-        .linea-17{
-            height: 15px;
-            width: 0px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-1520px) translateX(400px);
-        }
-
-        .linea-18{
-            height: 15px;
-            width: 0px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-1537px) translateX(800px);
-        }
-
-        .linea-19{
-            height: 420px;
-            width: 0px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-3060px) translateX(-460px);
-        }
-
-        .linea-20{
-            height: 0px;
-            width: 10px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-3400px) translateX(-465px);
-        }
-
-        .linea-21{
-            height: 0px;
-            width: 10px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-3290px) translateX(-465px);
-        }
-
-        .linea-22{
-            height: 0px;
-            width: 10px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-3220px) translateX(-455px);
-        }
-
-        .linea-23{
-            height: 0px;
-            width: 10px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-3180px) translateX(-465px);
-        }
-
-        .linea-24{
-            height: 0px;
-            width: 10px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-3120px) translateX(-455px);
-        }
-
-        .linea-25{
-            height: 0px;
-            width: 10px;
-            border: 1px solid black;
-            margin: 0 auto;
-            transform: translateY(-3070px) translateX(-465px);
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organigrama</title>
+    <link rel="stylesheet" href="css/organigrama.css">
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <body>
-    <div style="width: 100%;">
-        <div class="funcionario">Despacho del Alcalde</div>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper white fixed">
+                <div class="container">
+                    <div class="contenedor-nav">
+
+                        <ul class="left hide-on-med-and-down">
+                            <li><a href="logica/logout.php">ESTRUCTURA ORGANIZATIVA 2022
+                                    ALCALDÍA DEL MUNICIPIO LOS TAQUES
+                                </a></li>
+                        </ul>
+                        <a href="login" class="brand-logo right"><img src="img/resources/logo.png" height="54px"
+                                alt=""></a>
+                    </div>
+                </div>
+        </nav>
+    </div>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large red">
+            <i class="large material-icons">mode_edit</i>
+        </a>
+        <ul>
+            <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+            <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+            <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+            <li><a class="btn-floating blue" title="Salir"><i class="material-icons">close</i></a></li>
+        </ul>
+    </div>
+
+    <div style="width: 100%;" class="section">
+        <div class="funcionario">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+
+        </div>
         <div title="linea 1" class="linea-1"></div>
         <div title="linea 2" class="linea-2"></div>
         <div title="linea 3" class="linea-3"></div>
@@ -227,20 +62,137 @@
         <div title="linea 6" class="linea-6"></div>
         <div title="linea 7" class="linea-7"></div>
         <div title="linea 8" class="linea-8"></div>
-        
-        <div class="funcionario" style="transform: translateX(251px) translateY(-660px);"></div>
-        <div class="funcionario" style="transform: translateX(-251px) translateY(-740px);"></div>
-        <div class="funcionario" style="transform: translateX(251px) translateY(-730px);"></div>
-        <div class="funcionario" style="transform: translateX(-251px) translateY(-810px);"></div>
-        <div class="funcionario" style="transform: translateX(251px) translateY(-800px);"></div>
-        <div class="funcionario" style="transform: translateX(-251px) translateY(-880px);"></div>
-        <div class="funcionario" style="transform: translateX(-251px) translateY(-870px);"></div>
-        <div class="funcionario" style="transform: translateX(251px) translateY(-905px);"></div>
-        <div class="funcionario" style="transform: translateX(-251px) translateY(-855px);"></div>
-        <div class="funcionario" style="transform: translateX(251px) translateY(-935px);"></div>
-        <div class="funcionario" style="transform: translateX(251px) translateY(-920px);"></div>
-        <div class="funcionario" style="transform: translateX(-140px) translateY(-970px);"></div>
-        <div class="funcionario" style="transform: translateX(-360px) translateY(-1050px);"></div>
+
+        <div class="funcionario" style="transform: translateX(251px) translateY(-660px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-251px) translateY(-740px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(251px) translateY(-730px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-251px) translateY(-810px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(251px) translateY(-800px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-251px) translateY(-880px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-251px) translateY(-870px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(251px) translateY(-905px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-251px) translateY(-855px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(251px) translateY(-935px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(251px) translateY(-920px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-140px) translateY(-995px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-360px) translateY(-1085px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
 
         <div title="linea 9" class="linea-9"></div>
         <div title="linea 10" class="linea-10"></div>
@@ -249,35 +201,251 @@
         <div title="linea 13" class="linea-13"></div>
         <div title="linea 14" class="linea-14"></div>
 
-        <div class="funcionario" style="transform: translateX(-480px) translateY(-1150px);"></div>
-        <div class="funcionario" style="transform: translateX(-150px) translateY(-1230px);"></div>
-        <div class="funcionario" style="transform: translateX(400px) translateY(-1310px);"></div>
-        <div class="funcionario" style="transform: translateX(800px) translateY(-1390px);"></div>
+        <div class="funcionario" style="transform: translateX(-480px) translateY(-1255px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-150px) translateY(-1345px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(400px) translateY(-1435px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(800px) translateY(-1530px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
 
         <div title="linea 15" class="linea-15"></div>
         <div title="linea 16" class="linea-16"></div>
         <div title="linea 17" class="linea-17"></div>
         <div title="linea 18" class="linea-18"></div>
-        <div class="funcionario" style="transform: translateX(-570px) translateY(-1420px);"></div>
-        <div class="funcionario" style="transform: translateX(-570px) translateY(-1380px);"></div>
-        <div class="funcionario" style="transform: translateX(-350px) translateY(-1390px);"></div>
-        <div class="funcionario" style="transform: translateX(-570px) translateY(-1430px);"></div>
-        <div class="funcionario" style="transform: translateX(-350px) translateY(-1450px);"></div>
-        <div class="funcionario" style="transform: translateX(-570px) translateY(-1490px);"></div>
-        <div class="funcionario" style="transform: translateX(-250px) translateY(-1900px);"></div>
-        <div class="funcionario" style="transform: translateX(-320px) translateY(-1885px);"></div>
-        <div class="funcionario" style="transform: translateX(-10px) translateY(-2060px);"></div>
-        <div class="funcionario" style="transform: translateX(-110px) translateY(-2045px);"></div>
-        <div class="funcionario" style="transform: translateX(300px) translateY(-2220px);"></div>
-        <div class="funcionario" style="transform: translateX(520px) translateY(-2320px);"></div>
-        <div class="funcionario" style="transform: translateX(300px) translateY(-2270px);"></div>
-        <div class="funcionario" style="transform: translateX(520px) translateY(-2320px);"></div>
-        <div class="funcionario" style="transform: translateX(120px) translateY(-2320px);"></div>
-        <div class="funcionario" style="transform: translateX(300px) translateY(-2280px);"></div>
-        <div class="funcionario" style="transform: translateX(570px) translateY(-2380px);"></div>
-        <div class="funcionario" style="transform: translateX(300px) translateY(-2340px);"></div>
-        <div class="funcionario" style="transform: translateX(570px) translateY(-2420px);"></div>
-        <div class="funcionario" style="transform: translateX(800px) translateY(-2930px);"></div>
+        <div class="funcionario" style="transform: translateX(-570px) translateY(-1560px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-570px) translateY(-1540px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-350px) translateY(-1520px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-570px) translateY(-1600px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-350px) translateY(-1600px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-570px) translateY(-1670px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-250px) translateY(-2091px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-320px) translateY(-2078px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-10px) translateY(-2270px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(-110px) translateY(-2257px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(300px) translateY(-2430px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(520px) translateY(-2540px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(300px) translateY(-2490px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(520px) translateY(-2560px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(120px) translateY(-2570px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(300px) translateY(-2560px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(570px) translateY(-2660px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(300px) translateY(-2631px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(570px) translateY(-2710px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
+        <div class="funcionario" style="transform: translateX(800px) translateY(-3250px);">
+            <div class="f1">
+                <img src="img/media/maria.jpg" height="86px" width="100%" class="materialboxed" alt="despacho">
+            </div>
+            <div class="f2">
+                <span>Javier Vicente Gerardo Oliveros</span><br>
+                <span>CONSEJO LOCAL DE PLANIFICACIÓN PÚBLICA ( JEFA EJECUTIVA DE COPLAN)
+                </span>
+            </div>
+        </div>
         <div title="linea 19" class="linea-19"></div>
         <div title="linea 20" class="linea-20"></div>
         <div title="linea 21" class="linea-21"></div>
@@ -285,8 +453,39 @@
         <div title="linea 23" class="linea-23"></div>
         <div title="linea 24" class="linea-24"></div>
         <div title="linea 25" class="linea-25"></div>
-    
+        <div title="linea 26" class="linea-26"></div>
+        <div title="linea 27" class="linea-27"></div>
+        <div title="linea 28" class="linea-28"></div>
+        <div title="linea 29" class="linea-29"></div>
+        <div title="linea 30" class="linea-30"></div>
+        <div title="linea 31" class="linea-31"></div>
+        <div title="linea 32" class="linea-32"></div>
+        <div title="linea 33" class="linea-33"></div>
+        <div title="linea 34" class="linea-34"></div>
+        <div title="linea 35" class="linea-35"></div>
+        <div title="linea 36" class="linea-36"></div>
+        <div title="linea 37" class="linea-37"></div>
+        <div title="linea 38" class="linea-38"></div>
+        <div title="linea 39" class="linea-39"></div>
+        <div title="linea 40" class="linea-40"></div>
+        <div title="linea 41" class="linea-41"></div>
+        <div title="linea 42" class="linea-42"></div>
+        <div title="linea 43" class="linea-43"></div>
+        <div title="linea 44" class="linea-44"></div>
+
     </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.fixed-action-btn').floatingActionButton();
+        });
+
+        $(document).ready(function () {
+            $('.materialboxed').materialbox();
+        });
+    </script>
 </body>
 
 </html>
