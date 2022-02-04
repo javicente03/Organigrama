@@ -1,6 +1,5 @@
 body{
-    background: linear-gradient(180deg, #FFFF66, #FFFFFF);
-    height: 2000px;
+    background: linear-gradient(90deg, #FFFF66 10%, #FFFFFF 100%);
 }
 
 ul.left > li > a {
@@ -21,6 +20,10 @@ ul.left > li > a {
 .f2 {
     width: 65%;
     border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: ease 1s;
 }
 
 .materialboxed{
@@ -28,8 +31,58 @@ ul.left > li > a {
 }
 
 
-.funcionario > .f2> span{
-    font-size: .5em;
+.f2> a{
+    font-size: .6em;
     font-weight: bold;
     border-radius: 1em;
+    color: black;
+}
+
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cont-login{
+    width: 50%;
+    background-color: transparent;
+    box-shadow: 3px 3px 4px black;
+    padding: 10px;
+}
+
+.title{
+    font-weight: bold;
+    color: rgb(192, 0, 0);
+    text-align: left;
+}
+
+form > button {
+    background-color: rgb(192, 0, 0) !important;
+}
+
+.input-field > input {
+    background-color: transparent;
+    font-weight: bold;
+    color: black;
+}
+
+.input-field > input::placeholder, .file-path-wrapper > input::placeholder {
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.418);
+}
+
+.btn3p{
+    background: transparent;
+    border: transparent;
+    cursor: pointer;
+    text-align: right;
+}
+
+.btn3p:hover > i{
+    color: blue;
+}
+
+.f2:hover{
+    background: rgb(226, 226, 226);
 }
