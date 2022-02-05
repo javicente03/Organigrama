@@ -22,26 +22,22 @@ if (!isset($_SESSION["id"]))
                     <div class="contenedor-nav">
 
                         <ul class="left hide-on-med-and-down">
-                            <li><a href="logica/logout.php">ESTRUCTURA ORGANIZATIVA 2022
+                            <li><a href="organigrama.php">ESTRUCTURA ORGANIZATIVA 2022
                                     ALCALDÍA DEL MUNICIPIO LOS TAQUES
                                 </a></li>
                         </ul>
-                        <a href="login" class="brand-logo right"><img src="img/resources/logo.png" height="54px"
+                        <ul class="right">
+                            <li><a>Bienvenido <?php echo $_SESSION["nombre"] ?></a></li>
+                        </ul>
+                        <a class="brand-logo right"><img src="img/resources/logo.png" height="54px"
                                 alt=""></a>
                     </div>
                 </div>
+            </div>
         </nav>
     </div>
 
-    <div class="fixed-action-btn">
-        <a class="btn-floating btn-large red">
-            <i class="large material-icons">mode_edit</i>
-        </a>
-        <ul>
-            <li><a href="agregar_usuario.php" class="btn-floating red" title="Agregar Persona"><i class="material-icons">person_add</i></a></li>
-            <li><a href="logica/logout.php" class="btn-floating blue" title="Salir"><i class="material-icons">close</i></a></li>
-        </ul>
-    </div>
+    <?php include("boton_flotante.php"); ?>
 
     <div style="width: 100%;" class="section">
         <div class="funcionario" id="funcionario1">

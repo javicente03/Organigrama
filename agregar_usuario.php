@@ -28,15 +28,26 @@ else {
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper white fixed">
-                <ul class="left hide-on-med-and-down">
-                    <li><a>ALCALDIA BOLIVARIANA DEL MUNICIPIO LOS TAQUES
-                        </a></li>
-                </ul>
-                <a class="brand-logo right"><img src="img/resources/logo.png" height="54px" alt=""></a>
+                <div class="container">
+                    <div class="contenedor-nav">
+
+                        <ul class="left hide-on-med-and-down">
+                            <li><a href="organigrama.php">ESTRUCTURA ORGANIZATIVA 2022
+                                    ALCALDÍA DEL MUNICIPIO LOS TAQUES
+                                </a></li>
+                        </ul>
+                        <ul class="right">
+                            <li><a>Bienvenido <?php echo $_SESSION["nombre"] ?></a></li>
+                        </ul>
+                        <a class="brand-logo right"><img src="img/resources/logo.png" height="54px" alt=""></a>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
 
+    <?php include("boton_flotante.php"); ?>
+    
     <div class="section container">
         <div class="row z-depth-3" style="padding: 10px;">
             <form id="form" style="text-align: center;">
@@ -89,7 +100,6 @@ else {
     <script src="js/materialize.min.js"></script>
     <script src="js/elementos_materialize.js"></script>
     <script>
-
         $('#form').submit(function(e) {
             $("#progress").css("display", "block")
             $("#btn-submit").prop("disabled", true)
@@ -105,7 +115,7 @@ else {
                 processData: false, // tell jQuery not to process the data
                 contentType: false,
                 success: function(response) {
-                    if (response.substring(response.length - 2, response.length) == "ok"){
+                    if (response.substring(response.length - 2, response.length) == "ok") {
                         location.href = ""
                     } else {
                         M.toast({

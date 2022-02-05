@@ -10,7 +10,7 @@ if (isset($_SESSION["id"]))
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
+    <title>Olvidó su contraseña</title>
     <link rel="stylesheet" href="css/materialize.min.css">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -32,22 +32,18 @@ if (isset($_SESSION["id"]))
     <div class="section container contenedor">
         <div class="cont-login">
             <form id="form" style="text-align: center;">
-                <h4 class="title">Inicio de Sesión</h4>
+                <h5 class="title">Olvidó su contraseña</h5>
                 <div class="input-field">
-                    <i class="material-icons prefix">person</i>
-                    <input type="text" name="cedula" id="cedula" placeholder="Cédula">
+                    <i class="material-icons prefix">email</i>
+                    <input type="text" name="email" id="email">
+                    <label for="email">Ingrese su correo electrónico</label>
                 </div>
-                <div class="input-field">
-                    <i class="material-icons prefix" id="ver" style="cursor: pointer;">visibility</i>
-                    <input type="password" name="password" id="password" placeholder="Contraseña">
+                <div class="progress red accent-4" id="progress" style="display: none;">
+                    <div class="indeterminate"></div>
                 </div>
-                <div class="input-field">
-                <button type="submit" class="btn red accent-4" id="btn-submit">
-                    <i class="material-icons left">send</i>Ingresar</button>
-                </div>
+                <button type="submit" class="btn red accent-4" id="btn-submit"><i class="material-icons left">send</i>Enviar</button>
                 <input type="hidden" name="token" value="1">
             </form>
-            <a href="olvido_password.php" style="font-weight: bold;">¿Olvidó su contraseña?</a>
         </div>
     </div>
 
@@ -55,36 +51,25 @@ if (isset($_SESSION["id"]))
     <script src="js/materialize.min.js"></script>
     <script src="js/elementos_materialize.js"></script>
     <script>
-        $("#ver").click(function(e) {
-            var pass = document.getElementById("password");
-            var icon = document.getElementById("ver");
-
-            if (pass.getAttribute("type", "password") == "password") {
-                pass.setAttribute("type", "text")
-                icon.innerHTML = "visibility_off"
-            } else {
-                pass.setAttribute("type", "password")
-                icon.innerHTML = "visibility"
-            }
-        })
-
         $('#form').submit(function(e) {
             $("#btn-submit").prop("disabled", true)
+            $("#progress").css("display", "block")
             e.preventDefault();
             $.ajax({
                 type: "POST",
-                url: 'logica/login.php',
+                url: 'logica/olvido_password.php',
                 data: $(this).serialize(),
                 enctype: 'application/x-www-form-urlencoded',
                 success: function(response) {
-                    if (response == "ok") {
-                        location.href = "organigrama.php"
+                    if (response.substring(response.length - 2, response.length) == "ok"){
+                        location.href = "resetear_password.php"
                     } else {
                         M.toast({
                             html: response,
                             classes: 'rounded red'
                         })
                         $("#btn-submit").prop("disabled", false)
+                        $("#progress").css("display", "none")
                     }
                 }
             });

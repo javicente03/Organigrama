@@ -12,10 +12,15 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
 function sendMail($email,$asunto,$nombre,$apellido,$password){
-    $message = file_get_contents('email/templates/welcome.html'); 
-    $message = str_replace('%Nombre%', $nombre, $message); 
-    $message = str_replace('%Apellido%', $apellido, $message);
-    $message = str_replace('%Password%', $password, $message);
+    if($asunto == 'Clave de Ingreso - Alcaldia de Los Taques'){
+        $message = file_get_contents('email/templates/welcome.html'); 
+        $message = str_replace('%Nombre%', $nombre, $message); 
+        $message = str_replace('%Apellido%', $apellido, $message);
+        $message = str_replace('%Password%', $password, $message);
+    } else if($asunto == 'Alcaldia de Los Taques Resetee su contrasena'){
+        $message = file_get_contents('email/templates/reset_password.html'); 
+        $message = str_replace('%Token%', $password, $message); 
+    }
     
 // require '../vendor/autoload.php';
 
@@ -60,7 +65,7 @@ $mail->Password = 'javileon03*';
 //Note that with gmail you can only use your account address (same as `Username`)
 //or predefined aliases that you have configured within your account.
 //Do not use user-submitted addresses in here
-$mail->setFrom('javicentego@gmail.com', 'Corpotulipa');
+$mail->setFrom('javicentego@gmail.com', 'Alcaldia de Los Taques');
 
 //Set an alternative reply-to address
 //This is a good place to put user-submitted addresses

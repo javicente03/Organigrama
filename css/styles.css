@@ -2,7 +2,7 @@ body{
     background: linear-gradient(90deg, #FFFF66 10%, #FFFFFF 100%);
 }
 
-ul.left > li > a {
+ul.left > li > a, ul.right > li > a {
     color: rgb(192, 0, 0);
     font-weight: bold;
 }
@@ -85,4 +85,48 @@ form > button {
 
 .f2:hover{
     background: rgb(226, 226, 226);
+}
+
+@media (max-width: 400px) {
+    .cont-login{
+        width: 100%;
+    }
+}
+
+#tabla_filter > label > input{
+    height: 30px;
+    width: 80%;
+}
+
+table {
+    border: 1px solid black;
+    box-shadow: black 2px 2px 3px;
+}
+
+.title-table{
+    margin-bottom: -50px;
+}
+
+@media (max-width:670px) {
+    .title-table{
+        margin-bottom: 0;
+    }
+}
+
+tbody > tr {
+    background: transparent !important;
+}
+
+#tabla_length{
+    display: none;
+}
+
+.parrafo{
+    text-align: center; 
+    background-color: transparent; 
+    padding: 10px;
+    border-radius: 1em;
+    font-weight: bold;
+    color:black;
+    margin:10px 0;
 }

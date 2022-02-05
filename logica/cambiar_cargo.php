@@ -1,11 +1,9 @@
 <?php
 if (isset($_POST["token"])) {
     $token = true;
-    $cargo = addslashes(trim($_POST["cargo"]));
-
 
     if (isset($_POST["cargo"])) {
-        $cargo = $_POST["cargo"];
+        $cargo = addslashes(trim($_POST["cargo"]));
         include("conectar.php");
         $cargo_bd = ($con->query("SELECT* FROM cargos WHERE id_cargo = $cargo AND id_usuario IS NULL"))->fetch_assoc();
         if ($cargo_bd) {

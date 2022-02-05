@@ -37,7 +37,7 @@ if (isset($_POST["token"])) {
                                     
                                     $con->query("UPDATE cargos SET id_usuario = ".$recien_creado["id_usuario"]." WHERE id_cargo = $cargo");
                                     
-                                    $asunto = "Clave de Ingreso - Alcaldía de Los Taques";
+                                    $asunto = "Clave de Ingreso - Alcaldia de Los Taques";
                                     include("email/enviar-mail.php");
                                     $sendMail = sendMail($email, $asunto, $nombre, $apellido, $password);
                                     if ($sendMail)

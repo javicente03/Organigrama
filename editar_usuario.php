@@ -42,23 +42,34 @@ else {
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper white fixed">
-                <ul class="left hide-on-med-and-down">
-                    <li><a>ALCALDIA BOLIVARIANA DEL MUNICIPIO LOS TAQUES
-                        </a></li>
-                </ul>
-                <a class="brand-logo right"><img src="img/resources/logo.png" height="54px" alt=""></a>
+                <div class="container">
+                    <div class="contenedor-nav">
+
+                        <ul class="left hide-on-med-and-down">
+                            <li><a href="organigrama.php">ESTRUCTURA ORGANIZATIVA 2022
+                                    ALCALDÍA DEL MUNICIPIO LOS TAQUES
+                                </a></li>
+                        </ul>
+                        <ul class="right">
+                            <li><a>Bienvenido <?php echo $_SESSION["nombre"] ?></a></li>
+                        </ul>
+                        <a class="brand-logo right"><img src="img/resources/logo.png" height="54px" alt=""></a>
+                    </div>
+                </div>
             </div>
         </nav>
     </div>
 
+    <?php include("boton_flotante.php"); ?>
+
     <div class="section container">
         <div class="row z-depth-3" style="padding: 10px;">
-            <div class="col s11">
-                <h4 class="title">Editar Usuario <?php if(!$user["activo"]){ ?> (Suspendido) <?php } else echo "(Activo)" ?></h4>
+            <div class="col s9">
+                <h4 class="title">Editar Usuario <?php if (!$user["activo"]) { ?> (Suspendido) <?php } else echo "(Activo)" ?></h4>
             </div>
-            <div class="col s1">
-                <button type="button" id="suspender" <?php if($user["activo"]){ ?>title="Suspender" <?php } else echo "title='Activar'" ?> class="btn btn-flat">
-                    <i class="material-icons">not_interested</i>
+            <div class="col s3">
+                <button type="button" id="suspender" <?php if ($user["activo"]) { ?>title="Suspender" <?php } else echo "title='Activar'" ?> class="btn btn-flat">
+                    <i class="material-icons left">not_interested</i>Suspender
                 </button>
             </div>
             <form id="form" style="text-align: center;">
@@ -110,6 +121,23 @@ else {
                 <input type="hidden" name="usuario_cargo" value="<?php echo $id ?>">
                 <input type="hidden" name="token" value="token">
                 <div class="input-field col s12 m6"><button class="btn red accent-4"><i class="material-icons">edit</i></button></div>
+            </form>
+        </div>
+
+        <div class="row z-depth-3" style="padding: 10px;">
+            <form id="formAdministrador">
+                <?php if ($user["super_usuario"]) { ?>
+                    <h5 class="title">Revocar permisos como Administrador</h5>
+                <?php } else { ?>
+                    <h5 class="title">Designar como Administrador</h5>
+                <?php } ?>
+                <div class="input-field col s12 m6">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <input type="password" name="password" id="password" placeholder="Ingrese su clave de seguridad">
+                </div>
+                <input type="hidden" name="usuario_cargo" value="<?php echo $id ?>">
+                <input type="hidden" name="token" value="token">
+                <div class="input-field col s12 m6"><button type="submit" class="btn red accent-4"><i class="material-icons">send</i></button></div>
             </form>
         </div>
     </div>
@@ -171,7 +199,7 @@ else {
         $("#suspender").click(function(e) {
             option = "¿Seguro desea continuar con esta acción?"
 
-            if(confirm(option)){
+            if (confirm(option)) {
                 var formData = new FormData()
                 formData.append("id_usuario", <?php echo $id ?>)
                 formData.append("token", "token")
@@ -195,6 +223,26 @@ else {
                     }
                 });
             }
+        })
+
+        $("#formAdministrador").submit(function(e) {
+            e.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: 'logica/designar_super.php',
+                data: $(this).serialize(),
+                enctype: 'application/x-www-form-urlencoded',
+                success: function(response) {
+                    if (response == "ok" || response.substring(0, 15) == "<!DOCTYPE html>") {
+                        location.href = ""
+                    } else {
+                        M.toast({
+                            html: response,
+                            classes: 'rounded red'
+                        })
+                    }
+                }
+            });
         })
     </script>
 </body>
