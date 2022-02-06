@@ -12,6 +12,7 @@ if (isset($_POST["token"])) {
                 if ($user['activo']) {
                     session_start();
                     $_SESSION['id'] = $user['id_usuario'];
+                    $_SESSION['email'] = $user['email'];
                     $_SESSION['nombre'] = $user['nombres'];
                     $_SESSION['apellido'] = $user['apellidos'];
                     $_SESSION['cedula'] = $user['cedula'];
