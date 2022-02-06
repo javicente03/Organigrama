@@ -12,5 +12,5 @@ function validar_email($email){
     }
 }
 } else {
-    header("Location: ../404");
+    header("Location: ../error.php");
 }
