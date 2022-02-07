@@ -44,6 +44,7 @@ if (isset($_SESSION["id"]))
                 <button type="submit" class="btn red accent-4" id="btn-submit"><i class="material-icons left">send</i>Enviar</button>
                 <input type="hidden" name="token" value="1">
             </form>
+        <p class="parrafo">Por favor de ser necesario revise su correo de spam</p>
         </div>
     </div>
 

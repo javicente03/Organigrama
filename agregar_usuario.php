@@ -8,7 +8,7 @@ else {
 
     $token = true;
     include("logica/conectar.php");
-    $cargos = $con->query("SELECT * FROM cargos WHERE id_usuario IS NULL");
+    $cargos = $con->query("SELECT * FROM cargos WHERE id_usuario_cargo IS NULL");
 }
 ?>
 <!DOCTYPE html>

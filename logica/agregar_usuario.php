@@ -11,7 +11,7 @@ if (isset($_POST["token"])) {
         $cargo = $_POST["cargo"];
         if ($nombre != "" && $apellido != "" && $cedula != "" && $profesion != "") {
             include("conectar.php");
-            $cargo_bd = ($con->query("SELECT* FROM cargos WHERE id_cargo = $cargo AND id_usuario IS NULL"))->fetch_assoc();
+            $cargo_bd = ($con->query("SELECT* FROM cargos WHERE id_cargo = $cargo AND id_usuario_cargo IS NULL"))->fetch_assoc();
             if ($cargo_bd) {
                 if (($con->query("SELECT * FROM usuarios WHERE cedula = $cedula"))->num_rows == 0) {
                     include("validaciones.php");
@@ -35,7 +35,7 @@ if (isset($_POST["token"])) {
                                     
                                     $recien_creado = ($con->query("SELECT * FROM usuarios ORDER BY id_usuario DESC LIMIT 1"))->fetch_assoc();
                                     
-                                    $con->query("UPDATE cargos SET id_usuario = ".$recien_creado["id_usuario"]." WHERE id_cargo = $cargo");
+                                    $con->query("UPDATE cargos SET id_usuario_cargo = ".$recien_creado["id_usuario"]." WHERE id_cargo = $cargo");
                                     
                                     $asunto = "Clave de Ingreso - Alcaldia de Los Taques";
                                     include("email/enviar-mail.php");

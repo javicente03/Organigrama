@@ -13,7 +13,7 @@ if (isset($_POST["token"])) {
                 $con->query("UPDATE usuarios SET activo=false
                     WHERE id_usuario = " . $_POST["id_usuario"]);
 
-                $con->query("UPDATE cargos SET id_usuario=NULL WHERE id_usuario = ". $_POST["id_usuario"]);
+                $con->query("UPDATE cargos SET id_usuario_cargo=NULL WHERE id_usuario_cargo = ". $_POST["id_usuario"]);
             } else
                 $con->query("UPDATE usuarios SET activo=true
                 WHERE id_usuario = " . $_POST["id_usuario"]);        

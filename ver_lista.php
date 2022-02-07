@@ -8,7 +8,7 @@ else {
 
     $token = true;
     include("logica/conectar.php");
-    $usuarios = $con->query("SELECT * FROM usuarios U LEFT JOIN cargos C ON U.id_usuario = C.id_usuario GROUP BY U.id_usuario");
+    $usuarios = $con->query("SELECT * FROM usuarios U LEFT JOIN cargos C ON U.id_usuario = C.id_usuario_cargo");
 }
 ?>
 <!DOCTYPE html>
@@ -71,7 +71,7 @@ else {
                                 else echo "Suspendido"; ?></td>
                             <td><?php if ($row["super_usuario"]) echo "Administrador";
                                 else echo "Básico"; ?></td>
-                            <td><a href="editar_usuario.php?id=<?php echo $row["id_usuario"] ?>" class="btn btn-flat"><i class="material-icons">edit</i></a></td>
+                            <td><a href="editar_usuario.php?id=<?php echo $row['id_usuario'] ?>" class="btn btn-flat"><i class="material-icons">edit</i></a></td>
                         </tr>
                     <?php } ?>
                 </tbody>

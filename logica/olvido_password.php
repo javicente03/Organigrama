@@ -7,7 +7,7 @@ if(isset($_POST["token"])){
         $validar = validar_email($email);
         if($validar){
             include("conectar.php");
-            $sql = "SELECT * FROM usuario WHERE email = '$email'";
+            $sql = "SELECT * FROM usuarios WHERE email = '$email'";
             $proceso = $con->query($sql);
             if($data = $proceso->fetch_assoc()){
                 $hoy = date('Y-m-d');

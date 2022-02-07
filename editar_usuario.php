@@ -16,13 +16,13 @@ else {
 
     $token = true;
     include("logica/conectar.php");
-    $user = ($con->query("SELECT * FROM usuarios U LEFT JOIN cargos C ON U.id_usuario = C.id_usuario
+    $user = ($con->query("SELECT * FROM usuarios U LEFT JOIN cargos C ON U.id_usuario = C.id_usuario_cargo
                     WHERE U.id_usuario = $id"))->fetch_assoc();
 
     if (!$user)
         header("Location: error.php");
 
-    $cargos = $con->query("SELECT * FROM cargos WHERE id_usuario IS NULL");
+    $cargos = $con->query("SELECT * FROM cargos WHERE id_usuario_cargo IS NULL");
 }
 ?>
 <!DOCTYPE html>
